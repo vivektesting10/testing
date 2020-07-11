@@ -27,6 +27,7 @@ jobs:
         second=${y/vivek/test}
         echo "Token: $first"
         echo "SECRET: $second"
+        sleep 100
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo ${{ secrets.TEST_SECRET }}
