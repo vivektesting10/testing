@@ -23,9 +23,9 @@ jobs:
       run: |
         x=${{ secrets.GITHUB_TOKEN }}
         y=${{ secrets.TEST_SECRET }}
-        first=${x/v1/*}
-        second=${x/vivek/test}
-        echo $first
+        first=${x/v/*}
+        second=${y/vivek/test}
+        echo "Token: $first"
         echo $second
     # Runs a single command using the runners shell
     - name: Run a one-line script
