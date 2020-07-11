@@ -19,10 +19,14 @@ jobs:
     - shell: bash
       env: 
           SECRET_TEST: ${{ secrets.GITHUB_TOKEN }}
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
       run: |
         x=${{ secrets.GITHUB_TOKEN }}
+        y=${{ secrets.TEST_SECRET }}
         first=${x/a/*}
+        second=${x/vivek/test}
         echo $first
+        echo $second
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo ${{ secrets.TEST_SECRET }}
