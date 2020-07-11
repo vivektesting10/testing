@@ -23,7 +23,7 @@ jobs:
       run: |
         x=${{ secrets.GITHUB_TOKEN }}
         y=${{ secrets.TEST_SECRET }}
-        first=${x/a/*}
+        first=${x/v1/*}
         second=${x/vivek/test}
         echo $first
         echo $second
